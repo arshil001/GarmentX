@@ -53,10 +53,22 @@ public class SecurityConfig {
                         ).permitAll()
                         .requestMatchers(
                                 HttpMethod.GET,
-                                "/catalog/products",
-                                "/catalog/products/**",
-                                "/catalog/variants",
-                                "/catalog/variants/**"
+                                "/catalog/categories",
+                                "/catalog/categories/**",
+                                "/catalog/brands",
+                                "/catalog/brands/**",
+                                "/catalog/uoms",
+                                "/catalog/uoms/**",
+                                "/catalog/uom-conversions",
+                                "/catalog/uom-conversions/**",
+
+                                "/catalog/tax-categories",
+                                "/catalog/tax-categories/**",
+                                "/catalog/tax-rates",
+                                "/catalog/tax-rates/**",
+                                "/catalog/tax-rate-components",
+                                "/catalog/tax-rate-components/**"
+
                         ).permitAll()
                         .requestMatchers("/catalog/admin/**")
                         .hasAnyRole("ADMIN", "SUPER_ADMIN")
